@@ -4,7 +4,7 @@
 # apt-get update;
 
 # #安装
-# apt-get install -y build-essential git gcc g++ make systemtap-sdt-dev libxml2-dev zlib1g-dev libbz2-dev libcurl4-gnutls-dev
+apt-get install -y build-essential git gcc g++ make systemtap-sdt-dev libxml2-dev zlib1g-dev libbz2-dev libcurl4-gnutls-dev libwebp-dev libjpeg-dev libpng-dev libxpm-dev libfreetype6-dev libvpx-dev
 
 # #下载php
 # wget http://jp2.php.net/distributions/php-7.1.13.tar.gz
