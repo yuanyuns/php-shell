@@ -70,6 +70,8 @@ tar xzvf nginx-1.13.7.tar.gz
 tar xzvf pcre-8.38.tar.gz
 tar xzvf zlib-1.2.11.tar.gz
 
+cd nginx-1.13.7
+
 ./configure \
   --prefix=/usr/local/nginx \
   --with-pcre=../pcre-8.38 \
@@ -83,9 +85,15 @@ make && make install
 
 cd ..
 
+cp -f  nginx.conf /usr/local/nginx/conf/nginx.conf
+
+cp index.php /usr/local/nginx/html/
+
 cat >> /etc/profile << EOF
 export PATH=/usr/local/nginx/sbin:$PATH
 export PATH=/usr/local/php/bin:$PATH
 EOF
 
 source /etc/profile
+
+php-fpm && nginx
