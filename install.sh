@@ -6,6 +6,7 @@ apt-get update;
 # #安装
 apt-get install -y vim build-essential git gcc g++ make systemtap-sdt-dev libxml2-dev zlib1g-dev libbz2-dev libcurl4-gnutls-dev libwebp-dev libjpeg-dev libpng-dev libxpm-dev libfreetype6-dev libvpx-dev libldap2-dev libsasl2-dev unixodbc-dev libedit-dev libreadline-dev libxslt1-dev
 
+echo "-----------------安装php--------------------------"
 
 #下载php
 wget http://jp2.php.net/distributions/php-7.1.13.tar.gz
@@ -47,8 +48,44 @@ cp php-7.1.13/sapi/fpm/php-fpm /usr/local/bin
 cp /usr/local/php/etc/php-fpm.d/www.conf.default  /usr/local/php/etc/php-fpm.d/www.conf
 
 
+echo "安装nginx"
+
+wget http://nginx.org/download/nginx-1.13.7.tar.gz
+
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
+
+
+#安装zlib
+wget http://zlib.net/zlib-1.2.11.tar.gz
+
+# 安装ngx_http_google_filter_module扩展
+
+git clone https://github.com/cuber/ngx_http_google_filter_module
+
+# 安装substitutions 扩展
+
+git clone https://github.com/yaoweibin/ngx_http_substitutions_filter_module
+
+tar xzvf nginx-1.13.7.tar.gz
+tar xzvf pcre-8.38.tar.gz
+tar xzvf zlib-1.2.11.tar.gz
+
+./configure \
+  --prefix=/usr/local/nginx \
+  --with-pcre=../pcre-8.38 \
+  --with-openssl=../openssl-1.0.1j \
+  --with-zlib=../zlib-1.2.11 \
+  --with-http_ssl_module \
+  --add-module=../ngx_http_google_filter_module \
+  --add-module=../ngx_http_substitutions_filter_module
+
+make && make install
+
+cd ..
+
 cat >> /etc/profile << EOF
 export PATH=/usr/local/nginx/sbin:$PATH
 export PATH=/usr/local/php/bin:$PATH
 EOF
 
+source /etc/profile
