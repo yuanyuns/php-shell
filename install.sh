@@ -1,15 +1,26 @@
 #!/bin/bash
 
-# 软件更新
-apt-get update;
+# # 软件更新
+# apt-get update;
 
-#安装
-apt-get install -y build-essential git gcc g++ make systemtap-sdt-dev libxml2-dev zlib1g-dev libbz2-dev libcurl4-gnutls-dev
+# #安装
+# apt-get install -y build-essential git gcc g++ make systemtap-sdt-dev libxml2-dev zlib1g-dev libbz2-dev libcurl4-gnutls-dev
 
-#下载php
-wget http://jp2.php.net/distributions/php-7.1.13.tar.gz
+# #下载php
+# wget http://jp2.php.net/distributions/php-7.1.13.tar.gz
 
-tar -zxvf php-7.1.13.tar.gz
+# tar -zxvf php-7.1.13.tar.gz
+wget https://www.openssl.org/source/openssl-1.0.1j.tar.gz
+
+tar -zxvf openssl-1.0.1j.tar.gz
+
+cd openssl-1.0.1j
+
+./config && make && make install
+
+cd ~
+
+
 
 cd php-7.1.13
 
