@@ -42,7 +42,7 @@ cp php.ini-development /usr/local/php/php.ini
 
 cp php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 
-cp sapi/fpm/php-fpm /usr/local/bin
+cp php-7.1.13/sapi/fpm/php-fpm /usr/local/bin
 
 cp /usr/local/php/etc/php-fpm.d/www.conf.default  /usr/local/php/etc/php-fpm.d/www.conf
 
