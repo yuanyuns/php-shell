@@ -88,9 +88,6 @@ cp -f  nginx.conf /usr/local/nginx/conf/nginx.conf
 
 cp index.php /usr/local/nginx/html/
 
-cat >> /etc/profile << EOF
-export PATH=/usr/local/nginx/sbin:$PATH
-export PATH=/usr/local/php/bin:$PAT
-EOF
+cat profile  >> /etc/profile 
 
 source /etc/profile
