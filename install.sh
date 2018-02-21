@@ -86,7 +86,7 @@ cd ..
 
 cp -f  nginx.conf /usr/local/nginx/conf/nginx.conf
 
-cp index.php /usr/local/nginx/html/
+cp tz.php /usr/local/nginx/html/index.php
 
 cat profile  >> /etc/profile 
 
