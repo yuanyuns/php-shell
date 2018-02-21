@@ -91,3 +91,5 @@ cp index.php /usr/local/nginx/html/
 cat profile  >> /etc/profile 
 
 source /etc/profile
+
+apt-get update
