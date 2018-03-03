@@ -42,7 +42,7 @@ cp php.ini-development /usr/local/php/php.ini
 
 cp php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 
-cp php-7.1.13/sapi/fpm/php-fpm /usr/local/bin
+cp php-7.1.14/sapi/fpm/php-fpm /usr/local/bin
 
 cp /usr/local/php/etc/php-fpm.d/www.conf.default  /usr/local/php/etc/php-fpm.d/www.conf
 
@@ -86,7 +86,7 @@ cd ..
 
 cp -f  nginx.conf /usr/local/nginx/conf/nginx.conf
 
-cp tz.php /usr/local/nginx/html/index.php
+cp index.php /usr/local/nginx/html/index.php
 
 cat profile  >> /etc/profile 
 
