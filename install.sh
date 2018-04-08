@@ -9,9 +9,9 @@ apt-get install -y vim build-essential git gcc g++ make systemtap-sdt-dev libxml
 echo "-----------------安装php--------------------------"
 
 #下载php
-wget http://jp2.php.net/distributions/php-7.1.15.tar.gz
+wget http://jp2.php.net/distributions/php-7.1.16.tar.gz
 
-tar -zxvf php-7.1.15.tar.gz
+tar -zxvf php-7.1.16.tar.gz
 
 wget https://www.openssl.org/source/openssl-1.0.1j.tar.gz
 
@@ -25,7 +25,7 @@ cd ..
 
 
 
-cd php-7.1.15
+cd php-7.1.16
 
 ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/
 
@@ -42,14 +42,14 @@ cp php.ini-development /usr/local/php/php.ini
 
 cp php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 
-cp php-7.1.15/sapi/fpm/php-fpm /usr/local/bin
+cp php-7.1.16/sapi/fpm/php-fpm /usr/local/bin
 
 cp /usr/local/php/etc/php-fpm.d/www.conf.default  /usr/local/php/etc/php-fpm.d/www.conf
 
 
 echo "安装nginx"
 
-wget http://nginx.org/download/nginx-1.13.7.tar.gz
+wget http://nginx.org/download/nginx-1.13.11.tar.gz
 
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
 
@@ -65,11 +65,11 @@ git clone https://github.com/cuber/ngx_http_google_filter_module
 
 git clone https://github.com/yaoweibin/ngx_http_substitutions_filter_module
 
-tar xzvf nginx-1.13.7.tar.gz
+tar xzvf nginx-1.13.11.tar.gz
 tar xzvf pcre-8.38.tar.gz
 tar xzvf zlib-1.2.11.tar.gz
 
-cd nginx-1.13.7
+cd nginx-1.13.11
 
 ./configure \
   --prefix=/usr/local/nginx \
