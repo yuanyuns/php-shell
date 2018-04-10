@@ -9,9 +9,9 @@ apt-get install -y vim build-essential git gcc g++ make systemtap-sdt-dev libxml
 echo "-----------------安装php--------------------------"
 
 #下载php
-wget http://jp2.php.net/distributions/php-7.1.16.tar.gz
+wget http://jp2.php.net/distributions/php-7.2.4.tar.gz
 
-tar -zxvf php-7.1.16.tar.gz
+tar -zxvf php-7.2.4.tar.gz
 
 wget https://www.openssl.org/source/openssl-1.0.1j.tar.gz
 
@@ -25,7 +25,7 @@ cd ..
 
 
 
-cd php-7.1.16
+cd php-7.2.4
 
 ln -s /usr/lib/x86_64-linux-gnu/libldap.so /usr/lib/
 
@@ -42,7 +42,7 @@ cp php.ini-development /usr/local/php/php.ini
 
 cp php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 
-cp php-7.1.16/sapi/fpm/php-fpm /usr/local/bin
+cp php-7.2.4/sapi/fpm/php-fpm /usr/local/bin
 
 cp /usr/local/php/etc/php-fpm.d/www.conf.default  /usr/local/php/etc/php-fpm.d/www.conf
 
