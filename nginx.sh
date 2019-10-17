@@ -4,7 +4,7 @@
 apt-get update;
 
 # #安装
-apt-get install -y vim build-essential git gcc g++ make systemtap-sdt-dev libxml2-dev zlib1g-dev libbz2-dev libcurl4-gnutls-dev libwebp-dev libjpeg-dev libpng-dev libxpm-dev libfreetype6-dev libvpx-dev libldap2-dev libsasl2-dev unixodbc-dev libedit-dev libreadline-dev libxslt1-dev libpq-dev libgd2-xpm libgd2-xpm-dev libpcre3-dev libssl-dev libgd-dev google-perftools libgoogle-perftools-dev libperl-dev
+apt-get install -y vim build-essential git gcc g++ make systemtap-sdt-dev libxml2-dev zlib1g-dev libbz2-dev libcurl4-gnutls-dev libwebp-dev libjpeg-dev libpng-dev libxpm-dev libfreetype6-dev libvpx-dev libldap2-dev libsasl2-dev unixodbc-dev libedit-dev libreadline-dev libxslt1-dev libpq-dev libpcre3-dev libssl-dev libgd-dev google-perftools libgoogle-perftools-dev libperl-dev
 
 echo "安装nginx"
 
