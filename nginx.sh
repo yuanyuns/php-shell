@@ -24,6 +24,15 @@ tar xzvf nginx-1.16.1.tar.gz
 tar xzvf pcre-8.43.tar.gz
 tar xzvf zlib-1.2.11.tar.gz
 
+
+tar -zxvf openssl-1.0.1j.tar.gz
+
+cd openssl-1.0.1j
+
+./config && make && make install
+
+cd ..
+
 cd nginx-1.16.1
 
 ./configure \
