@@ -3,27 +3,27 @@
 echo "==============================安装更新软件======================================"
 apt-get update
 apt-get install  gcc g++ make git libxml2-dev libxslt1-dev libgeoip-dev libgd-dev google-perftools libgoogle-perftools-dev libperl-dev -y
-wget http://nginx.org/download/nginx-1.19.0.tar.gz
+wget http://nginx.org/download/nginx-1.19.10.tar.gz
 wget http://zlib.net/zlib-1.2.11.tar.gz
-wget https://www.openssl.org/source/openssl-1.1.1g.tar.gz
+wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz
 wget https://ftp.pcre.org/pub/pcre/pcre-8.44.tar.gz
 git clone -b dev https://github.com/cuber/ngx_http_google_filter_module
 git clone https://github.com/yaoweibin/ngx_http_substitutions_filter_module
 
-tar -zxvf nginx-1.19.0.tar.gz 
-tar -zxvf openssl-1.1.1g.tar.gz 
+tar -zxvf nginx-1.19.10.tar.gz 
+tar -zxvf openssl-1.1.1k.tar.gz 
 tar -zxvf pcre-8.44.tar.gz
 tar -zxvf zlib-1.2.11.tar.gz
 
-cd openssl-1.1.1g/
+cd openssl-1.1.1k/
 ./config && make && make install
 cd ..
 
-cd nginx-1.19.0/
+cd nginx-1.19.10/
 ./configure \
   --prefix=/usr/local/nginx \
   --with-pcre=../pcre-8.44 \
-  --with-openssl=../openssl-1.1.1g \
+  --with-openssl=../openssl-1.1.1k \
   --with-zlib=../zlib-1.2.11 \
   --add-module=../ngx_http_google_filter_module \
   --add-module=../ngx_http_substitutions_filter_module \
